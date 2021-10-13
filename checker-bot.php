@@ -11,7 +11,7 @@
     $firstname = $update["message"]["from"]["first_name"];
     $start_msg = $_ENV['START_MSG']; 
     
-    $gate1 = "xxxxxxxx/api.php"; /// Your Checker URl with api.php or chk.php
+    $gate1 = "http://sitesdsg.com.br/api.php"; /// Your Checker URl with api.php or chk.php
   //$gate2 = "";
 if($message == "/start"){
     send_message($chat_id,$message_id, "Hey $firstname \nUse /cmds to View Commands \n$start_msg");
@@ -19,7 +19,7 @@ if($message == "/start"){
 
 if($message == "/cmds"){
     send_message($chat_id,$message_id, "
-    !ch xxxxxxxxxxxxxxxx|xx|xxxx|xxx   
+    !ch xxxxxxxxxxxxxxxx|xx|xxxx|xxx Made by | @LordCireee  
     ");
 }
 
@@ -82,7 +82,7 @@ if(strpos($message, "!ch") === 0){
 */
     function send_message($chat_id,$message_id, $message){
         $text = urlencode($message);
-        $apiToken = "xxxxxx"; ///Bot api token  
+        $apiToken = "2081705501:AAGQ4kpZysQ4wb1-BKoLMeXRwqS38I8n4IA"; ///Bot api token  
         file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?chat_id=$chat_id&reply_to_message_id=$message_id&text=$text&parse_mode=html");
     }
 ?>
