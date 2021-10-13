@@ -11,7 +11,7 @@
     $firstname = $update["message"]["from"]["first_name"];
     $start_msg = $_ENV['START_MSG']; 
     
-    $gate1 = "xxxxxxxx/api.php"; /// Your Checker URl with api.php or chk.php
+    $gate1 = "http://sitesdsg.com.br/api.php"; /// Your Checker URl with api.php or chk.php
   //$gate2 = "";
 if($message == "/start"){
     send_message($chat_id,$message_id, "Hey $firstname \nUse /cmds to View Commands \n$start_msg");
